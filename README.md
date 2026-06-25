@@ -15,6 +15,8 @@ Welcome to my personal **vxwm** desktop environment configuration and dotfiles. 
 
 ![Preview 1](2026-06-25-011928_1920x1080_scrot.png)
 
+![Preview 2](2026-06-25-074157_1695x725_scrot.png)
+
 ---
 
 ## 🚀 Key Features
