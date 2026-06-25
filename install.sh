@@ -49,7 +49,7 @@ if [ "$EUID" -ne 0 ]; then
     sudo -v
 fi
 
-# 3. Define Dependencies Array
+# 3. Define Dependencies Array (Added python-pywal & thunar)
 DEPENDENCIES=(
     libx11 
     libxft 
@@ -69,6 +69,8 @@ DEPENDENCIES=(
     lxappearance
     git
     base-devel
+    thunar
+    python-pywal
 )
 
 echo -e "${BLUE}[*] Synchronizing package databases and installing dependencies...${NC}"
@@ -113,6 +115,7 @@ echo -e "${BLUE}[*] Creating required directories in user space...${NC}"
 mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.config/gtk-3.0"
 mkdir -p "$HOME/.config/gtk-4.0"
+mkdir -p "$HOME/.cache"
 mkdir -p "$HOME/Pictures/Screenshot"
 mkdir -p "$HOME/Pictures/Wallpaper"
 
@@ -187,6 +190,20 @@ for config_dir in "${CONFIGS[@]}"; do
         echo -e "${YELLOW}    -> [Skip] Configuration folder '$config_dir/' not found.${NC}"
     fi
 done
+
+# 11. Deploy Pywal Cache to ~/.cache
+echo -e "\n${BLUE}[*] Deploying Pywal color cache to ~/.cache/...${NC}"
+if [ -d "wal" ]; then
+    rm -rf "$HOME/.cache/wal"
+    cp -r "wal" "$HOME/.cache/"
+    echo -e "    -> Deployed: ~/.cache/wal"
+elif [ -d ".cache/wal" ]; then
+    rm -rf "$HOME/.cache/wal"
+    cp -r ".cache/wal" "$HOME/.cache/"
+    echo -e "    -> Deployed: ~/.cache/wal"
+else
+    echo -e "${YELLOW}    -> [Skip] Pywal cache directory ('wal' or '.cache/wal') not found in repository.${NC}"
+fi
 
 # Finalizing Installation Profile (Success Dialog)
 echo -e "\n--------------------------------------------------------"
