@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/nyxarch/Pictures/Wallpapers/wallhaven-4gk87e.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0d1013",
+        "foreground": "#d0cecb",
+        "cursor": "#d0cecb"
+    },
+    "colors": {
+        "color0": "#0d1013",
+        "color1": "#837D79",
+        "color2": "#87827D",
+        "color3": "#6E7985",
+        "color4": "#7A828C",
+        "color5": "#928E8B",
+        "color6": "#A5A09A",
+        "color7": "#d0cecb",
+        "color8": "#91908e",
+        "color9": "#837D79",
+        "color10": "#87827D",
+        "color11": "#6E7985",
+        "color12": "#7A828C",
+        "color13": "#928E8B",
+        "color14": "#A5A09A",
+        "color15": "#d0cecb"
+    }
+}

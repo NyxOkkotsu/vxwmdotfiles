@@ -1,0 +1,21 @@
+set $wallpaper /home/nyxarch/Pictures/Wallpapers/wallhaven-4vdlpl.jpg
+
+set $background #090b0f
+set $foreground #ebe1ce
+
+set $color0 #090b0f
+set $color1 #916D58
+set $color2 #C97B55
+set $color3 #D1A06A
+set $color4 #7E7B83
+set $color5 #A69891
+set $color6 #CBB6A3
+set $color7 #ebe1ce
+set $color8 #a49d90
+set $color9 #916D58
+set $color10 #C97B55
+set $color11 #D1A06A
+set $color12 #7E7B83
+set $color13 #A69891
+set $color14 #CBB6A3
+set $color15 #ebe1ce

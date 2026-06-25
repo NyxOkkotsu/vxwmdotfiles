@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/nyxarch/Pictures/Wallpapers/wallhaven-4vdlpl.jpg"
+let background = "#090b0f"
+let foreground = "#ebe1ce"
+let cursor     = "#ebe1ce"
+
+" Colors
+let color0  = "#090b0f"
+let color1  = "#916D58"
+let color2  = "#C97B55"
+let color3  = "#D1A06A"
+let color4  = "#7E7B83"
+let color5  = "#A69891"
+let color6  = "#CBB6A3"
+let color7  = "#ebe1ce"
+let color8  = "#a49d90"
+let color9  = "#916D58"
+let color10 = "#C97B55"
+let color11 = "#D1A06A"
+let color12 = "#7E7B83"
+let color13 = "#A69891"
+let color14 = "#CBB6A3"
+let color15 = "#ebe1ce"

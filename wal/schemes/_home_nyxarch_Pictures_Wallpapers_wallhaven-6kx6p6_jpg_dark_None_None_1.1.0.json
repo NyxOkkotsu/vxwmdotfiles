@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/nyxarch/Pictures/Wallpapers/wallhaven-6kx6p6.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#191312",
+        "foreground": "#e2e1df",
+        "cursor": "#e2e1df"
+    },
+    "colors": {
+        "color0": "#191312",
+        "color1": "#87857B",
+        "color2": "#757A83",
+        "color3": "#7A8587",
+        "color4": "#90918D",
+        "color5": "#AEADA6",
+        "color6": "#C5C1B8",
+        "color7": "#e2e1df",
+        "color8": "#9e9d9c",
+        "color9": "#87857B",
+        "color10": "#757A83",
+        "color11": "#7A8587",
+        "color12": "#90918D",
+        "color13": "#AEADA6",
+        "color14": "#C5C1B8",
+        "color15": "#e2e1df"
+    }
+}

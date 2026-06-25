@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/nyxarch/Pictures/Wallpapers/wallhaven-vgozk3.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#15100f",
+        "foreground": "#d4d8da",
+        "cursor": "#d4d8da"
+    },
+    "colors": {
+        "color0": "#15100f",
+        "color1": "#8D7958",
+        "color2": "#43758B",
+        "color3": "#408DA6",
+        "color4": "#6C97AF",
+        "color5": "#93A4AF",
+        "color6": "#9EB5C3",
+        "color7": "#d4d8da",
+        "color8": "#949798",
+        "color9": "#8D7958",
+        "color10": "#43758B",
+        "color11": "#408DA6",
+        "color12": "#6C97AF",
+        "color13": "#93A4AF",
+        "color14": "#9EB5C3",
+        "color15": "#d4d8da"
+    }
+}

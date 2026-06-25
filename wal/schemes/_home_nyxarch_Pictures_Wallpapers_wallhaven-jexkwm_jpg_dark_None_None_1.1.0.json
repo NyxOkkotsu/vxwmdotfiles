@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/nyxarch/Pictures/Wallpapers/wallhaven-jexkwm.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#16130f",
+        "foreground": "#b3babc",
+        "cursor": "#b3babc"
+    },
+    "colors": {
+        "color0": "#16130f",
+        "color1": "#6A614F",
+        "color2": "#96652B",
+        "color3": "#B36522",
+        "color4": "#91754E",
+        "color5": "#D89733",
+        "color6": "#A38B65",
+        "color7": "#b3babc",
+        "color8": "#7d8283",
+        "color9": "#6A614F",
+        "color10": "#96652B",
+        "color11": "#B36522",
+        "color12": "#91754E",
+        "color13": "#D89733",
+        "color14": "#A38B65",
+        "color15": "#b3babc"
+    }
+}
