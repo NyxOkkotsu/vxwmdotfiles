@@ -46,6 +46,6 @@ Follow these simple steps to deploy the entire configuration onto your fresh Arc
 ### 1. Just Run This
 ```fish
 git clone https://github.com/Wahidiningrat/vxwmdotfiles
-cd YOUR_REPO_NAME
+cd vxwmdotfiles
 chmod +x install.sh
 ./install.sh
