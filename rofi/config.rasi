@@ -1,0 +1,94 @@
+configuration {
+    modi: "drun";
+    font: "JetBrains Mono Nerd Font 10";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    drun-display-format: "{name}";
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+/* Import warna dari Pywal */
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    background-color: @background;
+    text-color:       @foreground;
+    border:           2px;
+    border-color:     @selected-active-background; /* Border tipis sewarna aksen pywal */
+    border-radius:    12px;                        /* Sudut membulat modern */
+    width:            500px;
+    padding:          20px;
+    location:         center;
+    anchor:           center;
+    x-offset:         0;
+    y-offset:         -10%;
+}
+
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, listview ];
+}
+
+/* Input Bar (Kolom Pencarian) */
+inputbar {
+    background-color: @alternate-normal-background; /* Warna kotak input diredam */
+    text-color:       @foreground;
+    expand:           false;
+    border-radius:    8px;
+    padding:          10px 14px;
+    margin:           0px 0px 10px 0px;
+    children:         [ entry ]; /* Prompt drun sudah dihapus total di sini */
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @foreground;
+    placeholder:      "Search...";
+    placeholder-color: @alternate-urgent-background;
+}
+
+/* List Aplikasi */
+listview {
+    background-color: transparent;
+    columns:          1;
+    lines:            6;
+    spacing:          4px;
+    cycle:            true;
+    dynamic:          true;
+    layout:           vertical;
+    border:           0;
+}
+
+/* Elemen Menu Aplikasi */
+element {
+    background-color: transparent;
+    text-color:       @foreground;
+    orientation:      horizontal;
+    border-radius:    6px;
+    padding:          8px 12px;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+    size:             24px;
+    cursor:           inherit;
+    margin:           0px 12px 0px 0px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "JetBrains Mono Nerd Font Medium 10";
+    cursor:           inherit;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+}
+
+/* Efek saat aplikasi dipilih (Hover / Select) */
+element selected {
+    background-color: @selected-active-background; /* Warna utama dari wallpaper pywal */
+    text-color:       @background;                 /* Teks jadi gelap biar kontras dan kebaca */
+}
