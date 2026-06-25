@@ -1,0 +1,40 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = 300
+    height = 200
+    origin = top-right
+    offset = 10x50
+    scale = 0
+    notification_limit = 0
+
+    font = Monospace 10
+    line_height = 0
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    word_wrap = yes
+    stack_duplicates = true
+
+    frame_width = 3
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    separator_color = frame
+
+[urgency_low]
+    background = "#090b0f"
+    foreground = "#ebe1ce"
+    frame_color = "#7E7B83"
+    timeout = 10
+
+[urgency_normal]
+    background = "#090b0f"
+    foreground = "#ebe1ce"
+    frame_color = "#C97B55"
+    timeout = 10
+
+[urgency_critical]
+    background = "#090b0f"
+    foreground = "#ebe1ce"
+    frame_color = "#916D58"
+    timeout = 0
