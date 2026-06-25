@@ -49,7 +49,7 @@ if [ "$EUID" -ne 0 ]; then
     sudo -v
 fi
 
-# 3. Define Dependencies Array (Added python-pywal & thunar)
+# 3. Define Dependencies Array
 DEPENDENCIES=(
     libx11 
     libxft 
@@ -113,6 +113,7 @@ fi
 # 6. Prepare Target Base Directories
 echo -e "${BLUE}[*] Creating required directories in user space...${NC}"
 mkdir -p "$HOME/.config"
+mkdir -p "$HOME/.config/dunst"
 mkdir -p "$HOME/.config/gtk-3.0"
 mkdir -p "$HOME/.config/gtk-4.0"
 mkdir -p "$HOME/.cache"
@@ -175,7 +176,6 @@ done
 echo -e "\n${BLUE}[*] Distributing config profiles to ~/.config/...${NC}"
 CONFIGS=(
     fish 
-    dunst 
     rofi 
     kitty 
     picom
@@ -185,11 +185,21 @@ for config_dir in "${CONFIGS[@]}"; do
     if [ -d "$config_dir" ]; then
         rm -rf "$HOME/.config/$config_dir"
         cp -r "$config_dir" "$HOME/.config/"
-        echo -e "    -> Deployed: ~/.config/$config_dir"
+        echo -e "    -> Deployed folder: ~/.config/$config_dir"
     else
         echo -e "${YELLOW}    -> [Skip] Configuration folder '$config_dir/' not found.${NC}"
     fi
 done
+
+# Explicitly copy standalone dunstrc file to ~/.config/dunst/dunstrc
+echo -e "\n${BLUE}[*] Deploying Dunst configuration file (dunstrc)...${NC}"
+if [ -f "dunstrc" ]; then
+    rm -f "$HOME/.config/dunst/dunstrc"
+    cp "dunstrc" "$HOME/.config/dunst/dunstrc"
+    echo -e "    -> Deployed file: ~/.config/dunst/dunstrc"
+else
+    echo -e "${YELLOW}    -> [Skip] File 'dunstrc' not found in repository root.${NC}"
+fi
 
 # 11. Deploy Pywal Cache to ~/.cache
 echo -e "\n${BLUE}[*] Deploying Pywal color cache to ~/.cache/...${NC}"
@@ -197,7 +207,7 @@ if [ -d "wal" ]; then
     rm -rf "$HOME/.cache/wal"
     cp -r "wal" "$HOME/.cache/"
     echo -e "    -> Deployed: ~/.cache/wal"
-elif [ -d ".cache/wal" ]; then
+elif [ -d ".cache/wal" ] ; then
     rm -rf "$HOME/.cache/wal"
     cp -r ".cache/wal" "$HOME/.cache/"
     echo -e "    -> Deployed: ~/.cache/wal"
